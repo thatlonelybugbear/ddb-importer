@@ -1,8 +1,7 @@
 // based on @ccjmk and @crymic macro for sleep. Gets targets and ignores those who are immune to sleep.
-// uses convinient effects
 // Midi-qol "On Use"
 
-const sleepHp = await args[0].damageTotal;
+const sleepHp = workflow.damageRolls[0].total;
 const condition = "Unconscious";
 console.log(`Sleep Spell => Available HP Pool [${sleepHp}] points`);
 const targets = await args[0].targets
